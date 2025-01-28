@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockBoy - Simplifying Stock Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+        .stock-list {
+            margin-top: 20px;
+        }
+        .stock-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .stock-card h3 {
+            margin: 0 0 10px;
+        }
+        .stock-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StockBoy</h1>
+        <p>Your One-Stop Stock Analysis Platform</p>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for stocks (e.g., TCS, Reliance)" id="searchInput">
+            <button onclick="searchStock()">Search</button>
+        </div>
+        <div class="stock-list" id="stockList">
+            <div class="stock-card">
+                <h3>Stock Name: Example Co.</h3>
+                <p><strong>Price:</strong> ₹1,234.56</p>
+                <p><strong>Market Cap:</strong> ₹10,000 Cr</p>
+                <p><strong>PE Ratio:</strong> 20.45</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 StockBoy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchStock() {
+            const input = document.getElementById('searchInput').value;
+            if (input) {
+                alert('Searching for: ' + input);
+                // Add logic here to fetch and display stock data from a backend.
+            } else {
+                alert('Please enter a stock name or ticker.');
+            }
+        }
+    </script>
+</body>
+</html>
